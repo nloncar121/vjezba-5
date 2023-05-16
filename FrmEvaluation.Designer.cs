@@ -28,36 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.cboActivities = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.dgvStudents = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.numPoints = new System.Windows.Forms.NumericUpDown();
+            this.MinGrade = new System.Windows.Forms.TextBox();
+            this.txtMinSignature = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
+            this.txtDate = new System.Windows.Forms.TextBox();
+            this.txtTeacher = new System.Windows.Forms.TextBox();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.numPoints)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnSave
             // 
-            this.button1.Location = new System.Drawing.Point(560, 415);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSave.Location = new System.Drawing.Point(560, 415);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 0;
+            this.btnSave.Text = "Spremi";
+            this.btnSave.UseVisualStyleBackColor = true;
             // 
             // cboActivities
             // 
+            this.cboActivities.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboActivities.FormattingEnabled = true;
             this.cboActivities.Location = new System.Drawing.Point(80, 30);
             this.cboActivities.Name = "cboActivities";
@@ -69,135 +69,134 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(77, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 16);
+            this.label1.Size = new System.Drawing.Size(61, 16);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Activity";
+            this.label1.Text = "Aktivnost";
             // 
-            // dateTimePicker1
+            // numPoints
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(381, 340);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(157, 22);
-            this.dateTimePicker1.TabIndex = 3;
+            this.numPoints.Location = new System.Drawing.Point(550, 341);
+            this.numPoints.Name = "numPoints";
+            this.numPoints.Size = new System.Drawing.Size(120, 22);
+            this.numPoints.TabIndex = 4;
             // 
-            // numericUpDown1
+            // MinGrade
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(571, 340);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 22);
-            this.numericUpDown1.TabIndex = 4;
+            this.MinGrade.Location = new System.Drawing.Point(570, 30);
+            this.MinGrade.Name = "MinGrade";
+            this.MinGrade.ReadOnly = true;
+            this.MinGrade.Size = new System.Drawing.Size(100, 22);
+            this.MinGrade.TabIndex = 6;
             // 
-            // dgvStudents
+            // txtMinSignature
             // 
-            this.dgvStudents.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStudents.Location = new System.Drawing.Point(80, 61);
-            this.dgvStudents.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvStudents.Name = "dgvStudents";
-            this.dgvStudents.RowHeadersWidth = 51;
-            this.dgvStudents.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStudents.Size = new System.Drawing.Size(621, 247);
-            this.dgvStudents.TabIndex = 5;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(570, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 6;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(429, 30);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 7;
+            this.txtMinSignature.Location = new System.Drawing.Point(429, 30);
+            this.txtMinSignature.Name = "txtMinSignature";
+            this.txtMinSignature.ReadOnly = true;
+            this.txtMinSignature.Size = new System.Drawing.Size(100, 22);
+            this.txtMinSignature.TabIndex = 7;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(426, 9);
+            this.label2.Location = new System.Drawing.Point(567, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 16);
+            this.label2.Size = new System.Drawing.Size(98, 16);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Activity";
+            this.label2.Text = "Uvjet za ocjenu";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(568, 9);
+            this.label3.Location = new System.Drawing.Point(426, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 16);
+            this.label3.Size = new System.Drawing.Size(87, 16);
             this.label3.TabIndex = 9;
-            this.label3.Text = "Activity";
+            this.label3.Text = "Uvjt za potpis";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(254, 318);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 16);
+            this.label4.Size = new System.Drawing.Size(70, 16);
             this.label4.TabIndex = 13;
-            this.label4.Text = "Activity";
+            this.label4.Text = "Ocjenjivač";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(378, 318);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 16);
+            this.label5.Size = new System.Drawing.Size(46, 16);
             this.label5.TabIndex = 12;
-            this.label5.Text = "Activity";
+            this.label5.Text = "Datum";
             // 
-            // textBox3
+            // txtDate
             // 
-            this.textBox3.Location = new System.Drawing.Point(381, 368);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 11;
+            this.txtDate.Location = new System.Drawing.Point(381, 340);
+            this.txtDate.Name = "txtDate";
+            this.txtDate.ReadOnly = true;
+            this.txtDate.Size = new System.Drawing.Size(100, 22);
+            this.txtDate.TabIndex = 11;
             // 
-            // textBox4
+            // txtTeacher
             // 
-            this.textBox4.Location = new System.Drawing.Point(256, 339);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 10;
+            this.txtTeacher.Location = new System.Drawing.Point(256, 339);
+            this.txtTeacher.Name = "txtTeacher";
+            this.txtTeacher.ReadOnly = true;
+            this.txtTeacher.Size = new System.Drawing.Size(100, 22);
+            this.txtTeacher.TabIndex = 10;
             // 
-            // button2
+            // btnCancel
             // 
-            this.button2.Location = new System.Drawing.Point(653, 415);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCancel.Location = new System.Drawing.Point(653, 415);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 14;
+            this.btnCancel.Text = "Odustani";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(547, 318);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(50, 16);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Bodovi";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(80, 96);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(590, 175);
+            this.textBox1.TabIndex = 17;
             // 
             // FrmEvaluation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtDate);
+            this.Controls.Add(this.txtTeacher);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dgvStudents);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.txtMinSignature);
+            this.Controls.Add(this.MinGrade);
+            this.Controls.Add(this.numPoints);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cboActivities);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSave);
             this.Name = "FrmEvaluation";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPoints)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,20 +204,20 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.ComboBox cboActivities;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.DataGridView dgvStudents;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.NumericUpDown numPoints;
+        private System.Windows.Forms.TextBox MinGrade;
+        private System.Windows.Forms.TextBox txtMinSignature;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtDate;
+        private System.Windows.Forms.TextBox txtTeacher;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
