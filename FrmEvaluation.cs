@@ -1,5 +1,5 @@
-﻿using Evaluation_Manager.Models;
-using Evaluation_Manager.Repositories;
+﻿using Evaluation_Manager.Repositories;
+using Evaluation_Manager.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Evaluation_Manager.Models;
 
 namespace Evaluation_Manager
 {
@@ -43,6 +44,22 @@ namespace Evaluation_Manager
            currentActivity.MaxPoints;
             numPoints.Minimum = 0;
             numPoints.Maximum = currentActivity.MaxPoints;
+            
+
+            var evaluation = EvaluataionRepository.GetEvaluation(student, currentActivity);
+            if (evaluation != null)
+            {
+                txtTeacher.Text = evaluation.Evaluator.ToString();
+                txtDate.Text = evaluation.EvaluationDate.ToString();
+                numPoints.Value = evaluation.Points;
+            }
+            else
+            {
+                txtTeacher.Text = FrmLogin.LoggedTeacher.ToString();
+                txtDate.Text = "-";
+                numPoints.Value = 0;
+            }
+
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
