@@ -46,7 +46,7 @@ namespace Evaluation_Manager
             numPoints.Maximum = currentActivity.MaxPoints;
             
 
-            var evaluation = EvaluataionRepository.GetEvaluation(student, currentActivity);
+            var evaluation = EvaluationRepository.GetEvaluation(student, currentActivity);
             if (evaluation != null)
             {
                 txtTeacher.Text = evaluation.Evaluator.ToString();
