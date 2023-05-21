@@ -8,13 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Evaluation_Manager.Models;
+using Evaluation_Manager.Repositories;
 
 namespace Evaluation_Manager
 {
     public partial class FrmLogin : Form
     {
-        string username = "nastavnik";
-        string password = "test";
+        public static Teacher LoggedTeacher { get; set; }
 
         public FrmLogin()
         {
@@ -25,30 +25,32 @@ namespace Evaluation_Manager
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if(LockTeacher != null)
 
-            if (txtUsername.Text == "")
-            {
-                MessageBox.Show("Korisničko ime nije uneseno!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if (txtPassword.Text == "")
-            {
-                MessageBox.Show("Lozinka nije unesena!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                if (txtUsername.Text == username && txtPassword.Text == password)
+            if (LockTeacher != null)
+
+                if (txtUsername.Text == "")
                 {
-                    FrmStudents frmStudents = new FrmStudents();
-                    Hide();
-                    frmStudents.ShowDialog();
-                    Close();
+                    MessageBox.Show("Korisničko ime nije uneseno!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (txtPassword.Text == "")
+                {
+                    MessageBox.Show("Lozinka nije unesena!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    MessageBox.Show("Krivi podaci!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    LoggedTeacher = TeacherRepository.GetTeacher(txtUsername.Text);
+                    if (LoggedTeacher != null && LoggedTeacher.CheckPassword(txtPassword.Text))
+                    {
+                        FrmStudents frmStudents = new FrmStudents();
+                        Hide();
+                        frmStudents.ShowDialog();
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Krivi podaci!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-            }
         }
     }
 }
