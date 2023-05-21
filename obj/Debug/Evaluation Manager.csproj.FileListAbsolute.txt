@@ -35,3 +35,4 @@ C:\Users\ANA\Source\Repos\vjezba-5\obj\Debug\Evaluation Manager.csproj.CoreCompi
 C:\Users\ANA\Source\Repos\vjezba-5\obj\Debug\Evaluation Manager.csproj.CopyComplete
 C:\Users\ANA\Source\Repos\vjezba-5\obj\Debug\Evaluation Manager.exe
 C:\Users\ANA\Source\Repos\vjezba-5\obj\Debug\Evaluation Manager.pdb
+C:\Users\ANA\source\repos\vjezba-5\obj\Debug\Evaluation_Manager.FrmEvaluation.resources

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Evaluation_Manager.Models;
 
 namespace Evaluation_Manager
 {
@@ -20,8 +21,12 @@ namespace Evaluation_Manager
             InitializeComponent();
         }
 
+        public static Teacher LockTeacher { get; set; }
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            if(LockTeacher != null)
+
             if (txtUsername.Text == "")
             {
                 MessageBox.Show("Korisničko ime nije uneseno!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
